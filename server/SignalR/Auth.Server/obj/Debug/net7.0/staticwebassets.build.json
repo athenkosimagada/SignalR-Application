@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "0aB4bdQJMdJpT84wt7y/80EBQ3yogGIVxxF4KdygQ+w=",
+  "Source": "Auth.Server",
+  "BasePath": "_content/Auth.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

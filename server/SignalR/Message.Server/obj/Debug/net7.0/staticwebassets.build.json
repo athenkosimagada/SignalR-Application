@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "2XY2squfzSP8dVZ+wItRL94t6B6quTuVVt6PM/Q8S70=",
+  "Source": "Message.Server",
+  "BasePath": "_content/Message.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

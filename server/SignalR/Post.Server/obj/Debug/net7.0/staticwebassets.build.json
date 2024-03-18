@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "SEVQ1bCB2UAFTse5Selyd9lEPT4QZmBOa9c8f2Vc3D4=",
+  "Source": "Post.Server",
+  "BasePath": "_content/Post.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -76,7 +76,6 @@ C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Applicati
 C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Application\server\SignalR\SignalR.Server\obj\Debug\net7.0\staticwebassets.build.json
 C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Application\server\SignalR\SignalR.Server\obj\Debug\net7.0\staticwebassets.development.json
 C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Application\server\SignalR\SignalR.Server\obj\Debug\net7.0\scopedcss\bundle\SignalR.Server.styles.css
-C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Application\server\SignalR\SignalR.Server\obj\Debug\net7.0\SignalR.Server.csproj.CopyComplete
 C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Application\server\SignalR\SignalR.Server\obj\Debug\net7.0\SignalR.Server.dll
 C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Application\server\SignalR\SignalR.Server\obj\Debug\net7.0\refint\SignalR.Server.dll
 C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Application\server\SignalR\SignalR.Server\obj\Debug\net7.0\SignalR.Server.pdb
@@ -110,3 +109,5 @@ C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Applicati
 C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Application\server\SignalR\SignalR.Server\bin\Debug\net7.0\zh-Hans\Microsoft.Data.SqlClient.resources.dll
 C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Application\server\SignalR\SignalR.Server\bin\Debug\net7.0\zh-Hant\Microsoft.Data.SqlClient.resources.dll
 C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Application\server\SignalR\SignalR.Server\bin\Debug\net7.0\runtimes\browser\lib\net7.0\System.Text.Encodings.Web.dll
+C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Application\server\SignalR\SignalR.Server\obj\Debug\net7.0\SignalR.Server.sourcelink.json
+C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Application\server\SignalR\SignalR.Server\obj\Debug\net7.0\SignalR..12399D53.Up2Date

@@ -104,9 +104,10 @@ C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Applicati
 C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Application\server\SignalR\Post.Server\obj\Debug\net7.0\staticwebassets.build.json
 C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Application\server\SignalR\Post.Server\obj\Debug\net7.0\staticwebassets.development.json
 C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Application\server\SignalR\Post.Server\obj\Debug\net7.0\scopedcss\bundle\Post.Server.styles.css
-C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Application\server\SignalR\Post.Server\obj\Debug\net7.0\Post.Server.csproj.CopyComplete
 C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Application\server\SignalR\Post.Server\obj\Debug\net7.0\Post.Server.dll
 C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Application\server\SignalR\Post.Server\obj\Debug\net7.0\refint\Post.Server.dll
 C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Application\server\SignalR\Post.Server\obj\Debug\net7.0\Post.Server.pdb
 C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Application\server\SignalR\Post.Server\obj\Debug\net7.0\Post.Server.genruntimeconfig.cache
 C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Application\server\SignalR\Post.Server\obj\Debug\net7.0\ref\Post.Server.dll
+C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Application\server\SignalR\Post.Server\obj\Debug\net7.0\Post.Server.sourcelink.json
+C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Application\server\SignalR\Post.Server\obj\Debug\net7.0\Post.Ser.71843C19.Up2Date

@@ -109,9 +109,10 @@ C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Applicati
 C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Application\server\SignalR\Auth.Server\obj\Debug\net7.0\staticwebassets.build.json
 C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Application\server\SignalR\Auth.Server\obj\Debug\net7.0\staticwebassets.development.json
 C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Application\server\SignalR\Auth.Server\obj\Debug\net7.0\scopedcss\bundle\Auth.Server.styles.css
-C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Application\server\SignalR\Auth.Server\obj\Debug\net7.0\Auth.Server.csproj.CopyComplete
 C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Application\server\SignalR\Auth.Server\obj\Debug\net7.0\Auth.Server.dll
 C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Application\server\SignalR\Auth.Server\obj\Debug\net7.0\refint\Auth.Server.dll
 C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Application\server\SignalR\Auth.Server\obj\Debug\net7.0\Auth.Server.pdb
 C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Application\server\SignalR\Auth.Server\obj\Debug\net7.0\Auth.Server.genruntimeconfig.cache
 C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Application\server\SignalR\Auth.Server\obj\Debug\net7.0\ref\Auth.Server.dll
+C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Application\server\SignalR\Auth.Server\obj\Debug\net7.0\Auth.Server.sourcelink.json
+C:\Users\Athenkosi Magada\3D Objects\WEB DEVELOPEMENT\Projects\SignalR-Application\server\SignalR\Auth.Server\obj\Debug\net7.0\Auth.Ser.E5B61D3E.Up2Date

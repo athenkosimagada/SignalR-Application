@@ -22,14 +22,31 @@ namespace Message.Server.Controllers
             _response = new ResponseDto();
         }
 
+        [HttpGet("GetMessages")]
+        public ResponseDto GetMessages()
+        {
+            try
+            {
+                IEnumerable<UserMessage> objList = _db.Messages.ToList();
+                _response.Result = _mapper.Map<IEnumerable<UserMessageDto>>(objList);
+            }
+            catch (Exception ex)
+            {
+                _response.IsSuccess = false;
+                _response.Message = ex.Message;
+            }
+
+            return _response;
+        }
+
         [HttpPost("GetMessagesBetweenTwoUsers")]
-        [Authorize]
         public ResponseDto Get([FromBody] MessageRequest message)
         {
             try
             {
                 IEnumerable<UserMessage> objList = _db.Messages
-                    .Where(u => u.FromUserId == message.FromUserId && u.ToUserId == message.ToUserId).ToList();
+                    .Where(u => u.FromUserId == message.FromUserId && u.ToUserId == message.ToUserId ||
+                    u.FromUserId == message.ToUserId && u.ToUserId == message.FromUserId).ToList();
                 _response.Result = _mapper.Map<IEnumerable<UserMessageDto>>(objList);
             }
             catch (Exception ex)
@@ -42,7 +59,6 @@ namespace Message.Server.Controllers
         }
 
         [HttpPost("AddMessage")]
-        [Authorize]
         public ResponseDto Post([FromBody] UserMessageDto userMessageDto)
         {
             try

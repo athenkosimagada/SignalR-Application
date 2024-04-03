@@ -10,12 +10,14 @@ namespace SignalR.Server.Hubs
     {
         private readonly ApplicationDbContext _db;
         private IMapper _mapper;
+        private bool isLogout;
         public ChatHub(ApplicationDbContext db, IMapper mapper)
         {
             _db = db;
             _mapper = mapper;
+            isLogout = false;
         }
-        public async Task CreateConnection(string userId)
+        public async Task OnLogin(string userId)
         {
             var result = _db.Connections.FirstOrDefault(u => u.UserId == userId);
             Connection connection;
@@ -40,16 +42,46 @@ namespace SignalR.Server.Hubs
                 _db.Connections.Update(result);
                 await _db.SaveChangesAsync();
             }
-            await Clients.Caller.SendAsync("ConnectionCreated", connection);
+            await Clients.Caller.SendAsync("OnLoggedIn", currentSignalrID);
         }
 
-        public async Task SendMessage(string receiverId)
+        public async Task OnLogout(string userId)
         {
-            var connectionReceiver = _db.Connections.FirstOrDefault(u => u.UserId == receiverId);
+            var result = _db.Connections.FirstOrDefault(u => u.UserId == userId);
+            if (result != null) 
+            { 
+                result.SignalrId = "OFFLINE";
+                _db.Connections.Update(result);
+                await _db.SaveChangesAsync();
+            }
+
+            await Clients.All.SendAsync("Logout", userId);
+        }
+
+        public async Task SendMessage(object message, string recieverId)
+        {
+            
+            var connectionReceiver = _db.Connections.FirstOrDefault(u => u.UserId == recieverId);
             if (!string.IsNullOrEmpty(connectionReceiver?.SignalrId))
             {
-                await Clients.Client(connectionReceiver.SignalrId).SendAsync("RecieveMessage", receiverId);
+                await Clients.Client(connectionReceiver.SignalrId).SendAsync("RecieveMessage", message);
             }
+        }
+        public override Task OnConnectedAsync()
+        {
+            return base.OnConnectedAsync();
+        }
+
+        public override Task OnDisconnectedAsync(Exception? exception)
+        {
+            var result = _db.Connections.FirstOrDefault(u => u.SignalrId == Context.ConnectionId);
+
+            if(result is not null)
+            {
+                _db.Connections.Remove(result);
+                _db.SaveChangesAsync();
+            }
+            return base.OnDisconnectedAsync(exception);
         }
     }
 }

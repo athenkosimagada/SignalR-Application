@@ -28,6 +28,11 @@ IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
 builder.Services.AddSingleton(mapper);
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
+builder.Services.AddScoped<IMessageService, MessageService>();
+
+builder.Services.AddHttpClient("Message", u => u.BaseAddress =
+new Uri(builder.Configuration["ServiceUrls:MessageAPI"]));
+
 builder.Services.AddControllers();
 builder.Services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
 builder.Services.AddScoped<IAuthService, AuthService>();

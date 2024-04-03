@@ -4,6 +4,7 @@ using Auth.Server.Service.IService;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 using static Azure.Core.HttpHeader;
 
 namespace Auth.Server.Controllers
@@ -13,12 +14,14 @@ namespace Auth.Server.Controllers
     public class AuthAPIController : ControllerBase
     {
         private readonly IAuthService _authService;
+        private readonly IMessageService _messageService;
         private IMapper _mapper;
         private ResponseDto _response;
 
-        public AuthAPIController(IAuthService authService, IMapper mapper)
+        public AuthAPIController(IAuthService authService, IMapper mapper, IMessageService messageService)
         {
             _authService = authService;
+            _messageService = messageService;
             _response = new();
             _mapper = mapper;
         }
@@ -29,6 +32,44 @@ namespace Auth.Server.Controllers
             try
             {
                 IEnumerable<ApplicationUser> objList = await _authService.GetUsers();
+                _response.Result = _mapper.Map<IEnumerable<ApplicationUserDto>>(objList);
+            }
+            catch (Exception ex)
+            {
+                _response.IsSuccess = false;
+                _response.Message = ex.Message;
+            }
+
+            return _response;
+        }
+
+
+        [HttpGet("GetChatUsers/{userId}")]
+        public async Task<ResponseDto> GetChatUsers(string userId)
+        {
+            try
+            {
+                IEnumerable<ApplicationUser> objList = await _authService.GetUsers();
+
+                var messages = await _messageService.GetMessages();
+
+                var chatMessages = messages.Where(u => u.FromUserId == userId || u.ToUserId == userId).ToList();
+
+                foreach (var user in objList)
+                {
+                    if(chatMessages.Count > 0 && user.Id != userId)
+                    {
+                        var messagesBetweenUsers = messages
+                            .Where(u => u.FromUserId == userId && u.ToUserId == user.Id ||
+                             u.FromUserId == user.Id && u.ToUserId == userId).ToList();
+
+                        if(messagesBetweenUsers.Count > 0)
+                        {
+                            user.LatestMessage = messagesBetweenUsers[messagesBetweenUsers.Count - 1];
+                        }
+                    }
+                }
+
                 _response.Result = _mapper.Map<IEnumerable<ApplicationUserDto>>(objList);
             }
             catch (Exception ex)
@@ -80,7 +121,6 @@ namespace Auth.Server.Controllers
         }
 
         [HttpGet("GeyUserById/{userId}")]
-        [Authorize]
         public ResponseDto GeyUserById(string userId)
         {
             var user = _authService.GetUserById(userId);

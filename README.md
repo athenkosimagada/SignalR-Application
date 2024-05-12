@@ -18,8 +18,8 @@ Welcome to our Real-Time Chat Application repository! This project is aimed at p
 
 To get started with the project, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/yourusername/real-time-chat.git`
-2. Navigate to the project directory: `cd real-time-chat`
+1. Clone the repository: `git clone https://github.com/athenkosimagada/SignalR-Application.git`
+2. Navigate to the project directory: `cd SignalR-Application`
 3. Install dependencies:
    - Backend: Navigate to the backend directory and follow instructions in the README.md file.
 4. Run the project:
